@@ -1,0 +1,14 @@
+# source files
+src
+
+# configs
+tsconfig.json
+.nvmrc
+commitlint.config.js
+eslint.config.js
+tsup.config.js
+
+# github
+.github
+.changeset
+.husky
