@@ -24,6 +24,7 @@ export default antfu(
 	{
 		rules: {
 			'style/semi': ['error', 'always'],
+			'ts/consistent-type-definitions': ['error', 'type'],
 		},
 	},
 );
