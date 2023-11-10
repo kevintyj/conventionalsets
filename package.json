@@ -25,6 +25,7 @@
 	"scripts": {
 		"watch": "tsup --watch",
 		"build": "tsup",
+		"test": "vitest",
 		"prepare": "husky install",
 		"lint:es": "eslint .",
 		"clean": "git clean -fdX",
@@ -41,7 +42,8 @@
 		"husky": "^8.0.3",
 		"lint-staged": "^15.0.2",
 		"tsup": "^7.2.0",
-		"typescript": "^5.2.2"
+		"typescript": "^5.2.2",
+		"vitest": "^0.34.6"
 	},
 	"lint-staged": {
 		"*": "eslint --fix"
