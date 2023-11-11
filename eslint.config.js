@@ -11,9 +11,16 @@ export default antfu(
 			quotes: 'single',
 		},
 		ignores: [
-			'dist',
+			'**/dist',
 			'.idea',
 		],
+		overrides: {
+			typescript: {
+				'ts/consistent-type-definitions': ['error', 'type'],
+				'ts/no-unsafe-assignment': 'warn',
+				'ts/no-unsafe-member-access': 'warn',
+			},
+		},
 	},
 	{
 		files: ['tsconfig.json', 'package.json'],
@@ -24,7 +31,6 @@ export default antfu(
 	{
 		rules: {
 			'style/semi': ['error', 'always'],
-			'ts/consistent-type-definitions': ['error', 'type'],
 		},
 	},
 );

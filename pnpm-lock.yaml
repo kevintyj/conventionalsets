@@ -4,60 +4,74 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  '@actions/core':
-    specifier: ^1.10.1
-    version: 1.10.1
-  '@actions/github':
-    specifier: ^6.0.0
-    version: 6.0.0
-  '@commitlint/config-conventional':
-    specifier: ^18.1.0
-    version: 18.1.0
-  '@commitlint/lint':
-    specifier: ^18.1.0
-    version: 18.1.0
-  '@commitlint/load':
-    specifier: ^18.2.0
-    version: 18.2.0(typescript@5.2.2)
+importers:
 
-devDependencies:
-  '@antfu/eslint-config':
-    specifier: ^1.1.0
-    version: 1.1.0(eslint@8.53.0)(typescript@5.2.2)(vitest@0.34.6)
-  '@changesets/cli':
-    specifier: ^2.26.2
-    version: 2.26.2
-  '@commitlint/cli':
-    specifier: ^18.2.0
-    version: 18.2.0(typescript@5.2.2)
-  '@commitlint/types':
-    specifier: ^18.1.0
-    version: 18.1.0
-  '@types/node':
-    specifier: ^20.9.0
-    version: 20.9.0
-  '@vitest/coverage-v8':
-    specifier: ^0.34.6
-    version: 0.34.6(vitest@0.34.6)
-  eslint:
-    specifier: ^8.53.0
-    version: 8.53.0
-  husky:
-    specifier: ^8.0.3
-    version: 8.0.3
-  lint-staged:
-    specifier: ^15.0.2
-    version: 15.0.2
-  tsup:
-    specifier: ^7.2.0
-    version: 7.2.0(typescript@5.2.2)
-  typescript:
-    specifier: ^5.2.2
-    version: 5.2.2
-  vitest:
-    specifier: ^0.34.6
-    version: 0.34.6
+  .:
+    devDependencies:
+      '@antfu/eslint-config':
+        specifier: ^1.1.0
+        version: 1.1.0(eslint@8.53.0)(typescript@5.2.2)(vitest@0.34.6)
+      '@changesets/cli':
+        specifier: ^2.26.2
+        version: 2.26.2
+      '@commitlint/cli':
+        specifier: ^18.2.0
+        version: 18.2.0(typescript@5.2.2)
+      '@vitest/coverage-v8':
+        specifier: ^0.34.6
+        version: 0.34.6(vitest@0.34.6)
+      eslint:
+        specifier: ^8.53.0
+        version: 8.53.0
+      husky:
+        specifier: ^8.0.3
+        version: 8.0.3
+      lint-staged:
+        specifier: ^15.0.2
+        version: 15.0.2
+      tsup:
+        specifier: ^7.2.0
+        version: 7.2.0(typescript@5.2.2)
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
+      vitest:
+        specifier: ^0.34.6
+        version: 0.34.6
+
+  packages/commitlint:
+    dependencies:
+      '@actions/core':
+        specifier: ^1.10.1
+        version: 1.10.1
+      '@actions/github':
+        specifier: ^6.0.0
+        version: 6.0.0
+      '@commitlint/config-conventional':
+        specifier: ^18.1.0
+        version: 18.1.0
+      '@commitlint/lint':
+        specifier: ^18.1.0
+        version: 18.1.0
+      '@commitlint/load':
+        specifier: ^18.2.0
+        version: 18.2.0(typescript@5.2.2)
+    devDependencies:
+      '@commitlint/types':
+        specifier: ^18.1.0
+        version: 18.1.0
+      '@types/node':
+        specifier: ^20.9.0
+        version: 20.9.0
+      tsup:
+        specifier: ^7.2.0
+        version: 7.2.0(typescript@5.2.2)
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
+      vitest:
+        specifier: ^0.34.6
+        version: 0.34.6
 
 packages:
 
