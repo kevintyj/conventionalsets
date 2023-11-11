@@ -13,6 +13,7 @@ async function run(): Promise<void> {
 	const pullRequestObject: pullRequest = {
 		title: pullRequestPayload.title as string,
 	};
+
 	await verifyTitle(pullRequestObject.title, 'commitlint.config.js');
 }
 

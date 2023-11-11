@@ -26,13 +26,17 @@ function getLintOptions(configuration: QualifiedConfig): LintOptions {
 	};
 }
 
+export const testLintOptions = {
+	getLintOptions,
+};
+
 /**
  * Utilizes the {@link lint} function to verify the title with options fetched using {@link getLintOptions}
  * @param {string} title - The commit/PR title to check for lint
  * @param {string} configPath - The configuration path of the commitlint config fetched from current working directory
  * @return {Promise<boolean>} - Returns true if linter passes, throws {@link Error} if failing
  */
-export async function verifyTitle(title: string, configPath: string): Promise<boolean> {
+export async function verifyTitle(title: string, configPath: string = ''): Promise<boolean> {
 	const commitlintConfig: QualifiedConfig = fs.existsSync(configPath)
 		? await load({}, { file: configPath, cwd: process.cwd() })
 		: await load(defaultConfig);

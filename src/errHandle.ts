@@ -1,12 +1,19 @@
-import * as core from '@actions/core';
+import { error, setFailed } from '@actions/core';
 
-function handleError(err: Error | unknown) {
+/**
+ * Handle standard error handler for github fail status
+ * @param {Error | unknown} err - error thrown
+ * @param {boolean} [fail] - enable to throw github failure status
+ */
+function handleError(err: Error | string | unknown, fail: boolean = true) {
 	if (err instanceof Error) {
-		core.error(err);
-		core.setFailed(err.message);
+		error(err);
+		fail && setFailed(err.message);
 	}
 	else {
-		core.error('Unknown error has occurred!');
+		const message: string = typeof err == 'string' ? err : 'Unknown error has occurred!';
+		error(message);
+		fail && setFailed(message);
 	}
 }
 
