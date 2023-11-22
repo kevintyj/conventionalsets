@@ -17,6 +17,9 @@ importers:
       '@commitlint/cli':
         specifier: ^18.2.0
         version: 18.2.0(typescript@5.2.2)
+      '@commitlint/config-conventional':
+        specifier: ^18.1.0
+        version: 18.1.0
       '@vitest/coverage-v8':
         specifier: ^0.34.6
         version: 0.34.6(vitest@0.34.6)
@@ -1731,7 +1734,6 @@ packages:
     engines: {node: '>=v18'}
     dependencies:
       conventional-changelog-conventionalcommits: 7.0.2
-    dev: false
 
   /@commitlint/config-validator@18.1.0:
     resolution: {integrity: sha512-kbHkIuItXn93o2NmTdwi5Mk1ujyuSIysRE/XHtrcps/27GuUKEIqBJp6TdJ4Sq+ze59RlzYSHMKuDKZbfg9+uQ==}
@@ -3749,7 +3751,6 @@ packages:
     engines: {node: '>=16'}
     dependencies:
       compare-func: 2.0.0
-    dev: false
 
   /conventional-commits-parser@5.0.0:
     resolution: {integrity: sha512-ZPMl0ZJbw74iS9LuX9YIAiW8pfM5p3yh2o/NbXHbkFuZzY5jvdi5jFycEOkmBW5H5I7nA+D6f3UcsCLP2vvSEA==}
