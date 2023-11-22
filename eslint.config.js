@@ -13,6 +13,8 @@ export default antfu(
 		ignores: [
 			'**/dist',
 			'.idea',
+			'**/__fixtures__',
+			'packages/conventionalsets-action',
 		],
 		overrides: {
 			typescript: {

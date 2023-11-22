@@ -1,0 +1,3 @@
+[submodule "packages/conventionalsets-action"]
+	path = packages/conventionalsets-action
+	url = https://github.com/kevintyj/conventionalsets-action.git
