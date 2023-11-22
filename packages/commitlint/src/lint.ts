@@ -44,6 +44,10 @@ export async function verifyTitle(title: string, configPath: string = ''): Promi
 	const linterResult = await lint(title, commitlintConfig.rules, getLintOptions(commitlintConfig));
 
 	if (linterResult.valid) {
+		/* eslint-disable no-console */
+		console.log(`✅ Commitlint tests passed!`);
+		console.log(linterResult);
+		/* eslint-enable no-console */
 		return true;
 	}
 	else {
