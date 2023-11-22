@@ -1,4 +1,4 @@
-name: 📝Lint PR title
+name: 📝 Lint PR title
 on:
   pull_request:
     types: [opened, edited, reopened]
@@ -32,4 +32,4 @@ jobs:
           pnpm commitlint --version
 
       - name: 📝Validate PR title with commitlint
-        uses: ./packages/commitlint/dist
+        uses: ./packages/commitlint
