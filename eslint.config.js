@@ -14,6 +14,7 @@ export default antfu(
 			'**/dist',
 			'.idea',
 			'**/__fixtures__',
+			'eslint.config.js',
 			'packages/conventionalsets-action',
 		],
 		overrides: {
